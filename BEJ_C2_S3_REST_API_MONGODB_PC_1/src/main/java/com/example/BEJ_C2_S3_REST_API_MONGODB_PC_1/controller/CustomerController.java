@@ -19,11 +19,13 @@ public class CustomerController {
 
 
     @PostMapping("/saveCustomer")
-    public ResponseEntity<?> saveCustomer(@RequestBody Customer customer){
+    public ResponseEntity<?> saveCustomer(@RequestBody Customer customer) {
         return new ResponseEntity<>(customerServiceInterface.saveCustomer(customer), HttpStatus.ACCEPTED);
     }
+
+
     @GetMapping("/getAllCustomers")
-    public ResponseEntity<?>getAllCustomers(){
-        return  new ResponseEntity<>(customerServiceInterface.getAllEmployees(),HttpStatus.OK);
+    public ResponseEntity<?> getAllCustomers() {
+        return new ResponseEntity<>(customerServiceInterface.getAllEmployees(), HttpStatus.OK);
     }
 }

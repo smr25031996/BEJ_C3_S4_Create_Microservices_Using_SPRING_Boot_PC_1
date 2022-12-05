@@ -4,14 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class UserModel
-{
+public class UserModel {
     @Id
     private String email;
     private String password;
 
-    public UserModel()
-    {
+    public UserModel() {
 
     }
 
@@ -38,9 +36,6 @@ public class UserModel
 
     @Override
     public String toString() {
-        return "UserModel{" +
-                "email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+        return "UserModel{" + "email='" + email + '\'' + ", password='" + password + '\'' + '}';
     }
 }

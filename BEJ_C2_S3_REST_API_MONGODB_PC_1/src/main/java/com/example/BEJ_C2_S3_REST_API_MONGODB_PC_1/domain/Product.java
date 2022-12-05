@@ -11,6 +11,9 @@ public class Product {
         this.productDescription = productDescription;
     }
 
+    public Product() {
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -42,8 +45,5 @@ public class Product {
 
     public void setProductDescription(String productDescription) {
         this.productDescription = productDescription;
-    }
-
-    public Product() {
     }
 }
