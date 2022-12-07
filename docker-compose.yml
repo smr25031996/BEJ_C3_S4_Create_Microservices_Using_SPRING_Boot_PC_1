@@ -11,6 +11,7 @@ services:
       - 8086:8086
     depends_on:
       - mongoService
+      - cloudapiservice
 
 
   mongoService:
@@ -32,6 +33,7 @@ services:
       - 8080:8080
     depends_on:
       - mysqlService
+      - cloudapiservice
 
 
   mysqlService:
@@ -46,6 +48,15 @@ services:
       MYSQL_USERNAME: root
       MYSQL_PASSWORD: root
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+
+  cloudapiservice:
+    image: apigateway-service
+    build: SpringAPIGateway/
+    restart: always
+    networks:
+      - mynetwork
+    ports:
+      - 9005:9005
 
 
 
