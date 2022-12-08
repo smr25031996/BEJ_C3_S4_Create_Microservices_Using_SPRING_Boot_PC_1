@@ -10,7 +10,6 @@
     </parent>
 
 
-    <groupId>com.niit</groupId>
     <artifactId>BEJ_C2_S3_REST_API_MONGODB_PC_1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <description>project for Spring Boot</description>
@@ -18,7 +17,6 @@
     <properties>
         <java.version>11</java.version>
         <spring-cloud.version>2020.0.3</spring-cloud.version>
-
     </properties>
 
     <dependencies>
@@ -32,8 +30,9 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -46,6 +45,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 
     <build>
         <plugins>
